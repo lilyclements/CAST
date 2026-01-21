@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-testing-hypotheses" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Testing Hypotheses</title>
+
+  <introduction>
+    <p>
+      This chapter introduces hypothesis testing and statistical inference.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-hypotheses-1">
+    <title>Section 1</title>
+    <p>
+      <!-- Add content here -->
+    </p>
+  </section>
+
+  <section xml:id="sec-hypotheses-2">
+    <title>Section 2</title>
+    <p>
+      <!-- Add content here -->
+    </p>
+  </section>
+
+</chapter>

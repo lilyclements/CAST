@@ -4,16 +4,50 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+  <book xml:id="cast-textbook">
+    <title>CAST: Computer-Assisted Statistics Textbook</title>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
-    <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+    <!-- Chapter 1: Introduction: About Data -->
+    <xi:include href="./ch01-about-data.ptx" />
 
+    <!-- Chapter 2: One Numerical Variable -->
+    <xi:include href="./ch02-one-numerical-variable.ptx" />
+
+    <!-- Chapter 3: Two Numerical Variables -->
+    <xi:include href="./ch03-two-numerical-variables.ptx" />
+
+    <!-- Chapter 4: Time Series -->
+    <xi:include href="./ch04-time-series.ptx" />
+
+    <!-- Chapter 5: Categorical Variables -->
+    <xi:include href="./ch05-categorical-variables.ptx" />
+
+    <!-- Chapter 6: Multivariate Data -->
+    <xi:include href="./ch06-multivariate-data.ptx" />
+
+    <!-- Chapter 7: Sampling and Variability -->
+    <xi:include href="./ch07-sampling-variability.ptx" />
+
+    <!-- Chapter 8: Designed Experiments -->
+    <xi:include href="./ch08-designed-experiments.ptx" />
+
+    <!-- Chapter 9: Estimating Parameters -->
+    <xi:include href="./ch09-estimating-parameters.ptx" />
+
+    <!-- Chapter 10: Testing Hypotheses -->
+    <xi:include href="./ch10-testing-hypotheses.ptx" />
+
+    <!-- Chapter 11: Comparing Groups -->
+    <xi:include href="./ch11-comparing-groups.ptx" />
+
+    <!-- Chapter 12: Regression Inference -->
+    <xi:include href="./ch12-regression-inference.ptx" />
+
+    <!-- Chapter 13: Independence -->
+    <xi:include href="./ch13-independence.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
