@@ -1,0 +1,9 @@
+# install4j response file for CAST 7.0.4
+bookInstallType=installCore
+createDesktopLinkAction$Boolean=true
+newBooksParent=C\:\\Users\\lclem\\Documents\\IDEMS
+sys.adminRights$Boolean=true
+sys.component.83$Boolean=true
+sys.component.84$Boolean=true
+sys.installationDir=C\:\\Program Files\\CAST
+sys.languageId=en

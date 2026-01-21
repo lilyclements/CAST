@@ -5,22 +5,760 @@
 
   <introduction>
     <p>
-      This chapter examines relationships between two numerical variables.
+      When only a single measurement is made from each individual (or unit) in a group, we cannot associate variation in that measurement with other characteristics of the individuals<mdash/>all variation is unexplained.
+    </p>
+    <p>
+      When two or more measurements are made from each individual, we may be able to associate variation in one measurement with changes in the other measurements; this can explain some of the variation. If two measurements are made from each individual, the data are called <term>bivariate</term>. Examples are:
+    </p>
+    <ul>
+      <li>Blood pressure and weight of males in their 50s</li>
+      <li>Floor area and sale price of houses in a town</li>
+      <li>Carbohydrate content and moisture content of corn</li>
+    </ul>
+    <p>
+      Our aim with such data is to find information about the relationship between the variables. New methods of graphical and numerical summary are required to capture this information.
     </p>
   </introduction>
 
-  <section xml:id="sec-two-num-1">
-    <title>Section 1</title>
-    <p>
-      <!-- Add content here -->
-    </p>
+  <!-- Section 1: Scatterplots -->
+  <section xml:id="sec-scatterplots">
+    <title>Scatterplots</title>
+
+    <subsection xml:id="subsec-more-than-one-variable">
+      <title>More than One Variable</title>
+      <p>
+        Many data sets contain two or more measurements from each individual. Even when the main interest is in one variable, the others can help to understand its distribution.
+      </p>
+      
+      <assemblage>
+        <title>The data matrix</title>
+        <p>
+          Many datasets contain several measurements from each <term>individual</term> (or plant, item or other unit). Each measurement type is called a <term>variable</term>.
+        </p>
+        <p>
+          A data set with more than one variable is called <term>multivariate</term>. One with two variables is called <term>bivariate</term>.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-scatterplot-definition">
+      <title>Scatterplots</title>
+      <p>
+        The main display that shows the relationship between two variables is a scatterplot.
+      </p>
+      
+      <assemblage>
+        <title>Scatterplots</title>
+        <p>
+          A scatterplot shows each individual as a single cross against a vertical axis (for the variable, <m>Y</m>) and a horizontal axis (for the other variable, <m>X</m>).
+        </p>
+        <p>
+          By convention, the variable on the vertical axis is called <m>Y</m> and the variable on the horizontal axis is called <m>X</m>.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-limitations-univariate">
+      <title>Limitations of Univariate Displays</title>
+      <p>
+        Univariate displays don't show relationships between variables.
+      </p>
+      
+      <assemblage>
+        <title>Scatterplots are needed to display relationships</title>
+        <p>
+          The relationship between two variables cannot be determined from examination of the two variables in isolation. The two datasets shown in the scatterplots below have the same <term>marginal distributions</term> for <m>X</m> and <m>Y</m>, but the variables are related in very different ways.
+        </p>
+        <p>
+          <!-- TODO: Add image showing two scatterplots with same marginal distributions but different relationships -->
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-marginal-distributions">
+      <title>Marginal Distributions</title>
+      <p>
+        A scatterplot of two variables can be enhanced with box plots or histograms on the margins of a scatterplot.
+      </p>
+      
+      <assemblage>
+        <title>Marginal distributions</title>
+        <p>
+          Although they do not contain information about the relationship between the variables, a display of the marginal distributions can be usefully <em>added</em> to a scatterplot to enhance it, perhaps highlighting skewness in <m>X</m> and <m>Y</m>.
+        </p>
+        <p>
+          <!-- TODO: Add image showing scatterplot with marginal histograms -->
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-time-series">
+      <title>Time Series</title>
+      <p>
+        When a single measurement is made at regular intervals, the data are called a time series. Time series data can be treated as bivariate, with time being the second variable.
+      </p>
+      
+      <assemblage>
+        <title>Time-ordering of univariate data</title>
+        <p>
+          Some data sets are apparently univariate, but the measurements are made sequentially in time. A data set of this form is called a <term>time series</term>.
+        </p>
+        <p>
+          The time at which each measurement was made may be treated as an additional numerical variable, and the measurement can then be plotted against time. This type of scatterplot is often called a <term>time series plot</term>.
+        </p>
+        <p>
+          Time series data can be displayed and analysed with many of the techniques that are used for bivariate data.
+        </p>
+        <p>
+          Additional methods of analysis that are specific to time series data will be presented in a later chapter.
+        </p>
+      </assemblage>
+    </subsection>
   </section>
 
-  <section xml:id="sec-two-num-2">
-    <title>Section 2</title>
-    <p>
-      <!-- Add content here -->
-    </p>
+  <!-- Section 2: Understanding Relationships -->
+  <section xml:id="sec-understanding-relationships">
+    <title>Understanding Relationships</title>
+
+    <subsection xml:id="subsec-strength-relationship">
+      <title>Strength of a Relationship</title>
+      <p>
+        The main feature of interest in a scatterplot is the strength of the relationship between the two variables.
+      </p>
+      
+      <assemblage>
+        <title>Strength of relationship</title>
+        <p>
+          The most important information that a scatterplot shows is the <term>strength</term> of the relationship between the variables. The closer the points to a straight line or curve, the stronger the relationship.
+        </p>
+        <p>
+          If higher values of one variable tend to be associated with higher values of the other variable, the crosses on the scatterplot will be in a band with positive slope and the relationship is said to be <term>positive</term>. If high values of one variable tend to be associated with low values of the other variable, we say that there is a <term>negative</term> relationship.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-outliers-bivariate">
+      <title>Outliers</title>
+      <p>
+        An extreme value of one or both of the variables is an outlier. An unusual combination of values is also called an outlier.
+      </p>
+      <p>
+        The strength of the relationship between two variables is usually the most important information that we gain from a scatterplot but a scatterplot may display other features.
+      </p>
+      
+      <assemblage>
+        <title>Outliers</title>
+        <p>
+          Values that seem 'different' from the rest of the data are called <term>outliers</term>.
+        </p>
+        <p>
+          An outlier may be an extreme value of one or other variable, but an individual may be an outlier even though neither <m>X</m> nor <m>Y</m> is unusual on its own. One point is an outlier in each of the three data sets below.
+        </p>
+        <p>
+          <!-- TODO: Add image showing three scatterplots with different types of outliers -->
+        </p>
+        <p>
+          The point is an outlier in the righthand data set because it lies well above the main group of points<mdash/>its <m>y</m>-value is much higher than others with similar <m>x</m>-values.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Importance of outliers</title>
+        <p>
+          Outliers are features of a data set that <em>must</em> be carefully checked. An outlier is often caused by a recording or transcription error, so...
+        </p>
+        <p>
+          First check that the values of the variables are correctly recorded.
+        </p>
+        <p>
+          Sometimes an outlier arises because an individual is fundamentally different from the others. Identifying what makes the individual different often gives considerable insight into the data.
+        </p>
+        <p>
+          The individuals should be further examined (perhaps collecting further information from them) to try to assess whether the outlier individual has distinct characteristics.
+        </p>
+        <p>
+          An outlier that is either extreme or that has other distinctive characteristics would often be deleted from the data set, but should be mentioned in a report about the data.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-clusters-bivariate">
+      <title>Clusters</title>
+      <p>
+        If the crosses on a scatterplot separate into clusters, different groups of individuals are suggested.
+      </p>
+      
+      <assemblage>
+        <title>Clusters</title>
+        <p>
+          Sometimes the cloud of crosses separates into two or more groups which are called <term>clusters</term>. As with outliers, clusters provide important information that should be further investigated.
+        </p>
+        <p>
+          <!-- TODO: Add image showing scatterplot with clusters -->
+        </p>
+        <p>
+          The individuals should be examined (perhaps collecting further information from them) to assess whether the clusters correspond to individuals with distinct characteristics. For example, the clusters may correspond to males and females, or two different species of plant.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-overinterpretation">
+      <title>Dangers of Over-interpretation</title>
+      <p>
+        In small data sets, there may be considerable variability, so patterns should be strongly evident before they are reported.
+      </p>
+      
+      <assemblage>
+        <title>Interpreting outliers or clusters</title>
+        <p>
+          We have described some information that may be read from a scatterplot. But how strong must the corresponding patterns be before we should report them?
+        </p>
+        <p>
+          In both univariate and bivariate data sets, outliers or clusters must be <em>distinct</em> before we should conclude that they are real, in the absence of further external information confirming that the individuals are distinct.
+        </p>
+        <p>
+          Particularly in small data sets, outliers, clusters and other patterns may arise <em>by chance</em>, without being associated with any real features in the individuals.
+        </p>
+        <p>
+          <alert>Important!</alert> Be careful not to overinterpret features in scatterplot unless they are well defined, especially if the sample size is small.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-explanatory-response">
+      <title>Explanatory and Response Variables</title>
+      <p>
+        One variable can often be classified as an explanatory variable that either causally affects the response variable, or is useful for predicting its value.
+      </p>
+      
+      <assemblage>
+        <title>Causal relationships</title>
+        <p>
+          In many bivariate data sets, the relationship between the two variables is not symmetric. From the nature of the variables and the way that the data were collected, it may be clear that one variable, <m>X</m>, can potentially influence the other, <m>Y</m>, but that the opposite is impossible.
+        </p>
+        <p>
+          In such data, the variable <m>X</m> is called the <term>explanatory variable</term> and <m>Y</m> is called the <term>response</term>.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Experiments</title>
+        <p>
+          In an experiment, the person conducting the experiment controls the values of the explanatory variable. A well-designed experiment always ensures that the relationship between the explanatory variable and response is causal.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Observational studies</title>
+        <p>
+          If the person collecting the data has no control over either of the variables, and simply records a pair of values from each individual, then the data are called <term>observational</term>. If one variable is an earlier measurement than the other, we may also be able to treat it as an explanatory variable and the later variable as the response.
+        </p>
+        <p>
+          Even if the relationship is not causal, we are sometimes interested in <em>predicting</em> the value of one variable from the other. The variable being predicted would then be treated as the response.
+        </p>
+      </assemblage>
+    </subsection>
+  </section>
+
+  <!-- Section 3: Correlation -->
+  <section xml:id="sec-correlation">
+    <title>Correlation</title>
+
+    <subsection xml:id="subsec-units-for-xy">
+      <title>Units for X and Y</title>
+      <p>
+        A numerical description of the strength of a relationship should not be affected by rescaling the variables.
+      </p>
+      
+      <assemblage>
+        <title>Units and strength of a relationship</title>
+        <p>
+          A numerical summary of the strength of the relationship between two variables should not depend on the units in which we measure the two variables. The strength of the two relationships between Angle and Temperature are the same in both of the scatterplots below.
+        </p>
+        <p>
+          <!-- TODO: Add image showing same relationship in different units -->
+        </p>
+        <p>
+          We therefore start by defining <term>units-free</term> versions of the two variables and will summarise the strength of the relationship in terms of them.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-z-scores">
+      <title>Units-free variables (z-scores)</title>
+      <p>
+        Standardising a variable gives z-scores that do not depend on the units of the original variable. (The correlation coefficient will be defined in terms of z-scores for <m>X</m> and <m>Y</m>.)
+      </p>
+      
+      <assemblage>
+        <title>Z-scores</title>
+        <p>
+          The standardised form of a variable <m>X</m> is found by subtracting its mean then dividing by its standard deviation,
+          <me>
+            \text{standardised value} = \frac{x - \bar{x}}{s_x}
+          </me>
+        </p>
+        <p>
+          The resulting values are called <term>z-scores</term> and are the same, whatever the units in which <m>X</m> was originally recorded.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Properties of z-scores</title>
+        <p>
+          A standardised variable always has zero mean and standard deviation one.
+          <me>
+            \bar{z} = 0, \quad s_z = 1
+          </me>
+        </p>
+        <p>
+          From the 70-95-100 rule-of-thumb [TODO: link to One Numerical Variable bit on that]:
+        </p>
+        <ul>
+          <li>About 70% of z-scores will be between <m>-1</m> and <m>+1</m></li>
+          <li>About 95% of z-scores will be between <m>-2</m> and <m>+2</m></li>
+          <li>Almost all z-scores will be between <m>-3</m> and <m>+3</m></li>
+        </ul>
+        <p>
+          An individual's z-score tells you how many standard deviations it is above the mean. From its value, you can tell whether the value is very high (say over <m>+2</m>) or low (say under <m>-2</m>) in relation to the other values of the variable.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-correlation-coefficient">
+      <title>Correlation Coefficient</title>
+      <p>
+        The correlation coefficient summarises the strength of the relationship between <m>X</m> and <m>Y</m>. It is <m>+1</m> when the scatterplot crosses are on a straight line with positive slope, <m>-1</m> when on a line with negative slope, and zero when <m>X</m> and <m>Y</m> are unrelated.
+      </p>
+      
+      <assemblage>
+        <title>Definition</title>
+        <p>
+          The <term>correlation coefficient</term> is usually defined by the formula
+          <me>
+            r = \frac{\sum z_x z_y}{n-1}
+          </me>
+          where <m>z_x</m> and <m>z_y</m> are the z-scores for <m>X</m> and <m>Y</m>.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-scatterplots-and-r">
+      <title>Scatterplots and the value of r</title>
+      <p>
+        You should be able to estimate the value of <m>r</m> from looking at a scatterplot and imagine a scatter of crosses corresponding to any value of <m>r</m>.
+      </p>
+      
+      <assemblage>
+        <title>How does <m>r</m> relate to the shape of a scatterplot?</title>
+        <p>
+          The properties on the previous page describe the general behaviour of the correlation coefficient, but do not give enough resolution for you to anticipate the type of scatterplot that might have correlation coefficient 0.8 say, or 0.96.
+        </p>
+        <p>
+          <!-- TODO: Add image showing scatterplots with different r values -->
+        </p>
+        <p>
+          Note that values of <m>r</m> between <m>-0.5</m> and <m>0.5</m> correspond to very weak relationships.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-nonlinear-correlations">
+      <title>Nonlinear Relationships</title>
+      <p>
+        The correlation coefficient is only a good measure of the strength of a relationship if the points in a scatterplot are scattered round a straight line, not a curve.
+      </p>
+      
+      <assemblage>
+        <title>Correlation and nonlinear relationships</title>
+        <p>
+          The correlation coefficient, <m>r</m>, is a good description of the strength of a relationship <em>provided the crosses in a scatterplot of the data are not scattered round a curve</em>. If the data are scattered round a curve, the relationship is called <term>nonlinear</term> and <m>r</m> may seriously underestimate its strength.
+        </p>
+        <p>
+          <!-- TODO: Add image showing curved relationship with low r -->
+        </p>
+        <p>
+          The correlation coefficient does <em>not</em> describe the strength of nonlinear relationships adequately.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-r-limitations">
+      <title>R does not tell the whole story</title>
+      <p>
+        The correlation coefficient cannot identify curvature, outliers or clusters and can be misleading if these features are present. A scatterplot must always be examined too.
+      </p>
+      
+      <assemblage>
+        <title>Always look at a scatterplot first</title>
+        <p>
+          Although the correlation coefficient is a good description of the strength of many relationships, it does not adequately describe others.
+        </p>
+        <p>
+          A scatterplot should always be examined to help assess whether there are features in the data that the correlation coefficient cannot describe.
+        </p>
+        <p>
+          The data sets below share the same value of <m>r = 0.816</m> (and the same means and st devns for <m>X</m> and <m>Y</m>) but their scatterplots show that different conclusions should be drawn from them.
+        </p>
+        <p>
+          <!-- TODO: Add in the Data Dinosaur from R here (Anscombe's quartet / Datasaurus dozen) -->
+        </p>
+      </assemblage>
+    </subsection>
+  </section>
+
+  <!-- Section 4: Least Squares -->
+  <section xml:id="sec-least-squares">
+    <title>Least Squares</title>
+
+    <subsection xml:id="subsec-predicting-y-from-x">
+      <title>Predicting Y from X</title>
+      <p>
+        A line or curve is useful for predicting the value of <m>Y</m> from a known value of <m>X</m>.
+      </p>
+      
+      <assemblage>
+        <title>The notion of prediction</title>
+        <p>
+          <em>Causal relationships</em>
+        </p>
+        <p>
+          If one variable, <m>X</m>, is thought to directly affect the other, <m>Y</m>, we might hope to predict the value of <m>Y</m> if the value of <m>X</m> is changed.
+        </p>
+        <p>
+          <em>Non-causal relationships</em>
+        </p>
+        <p>
+          Even if the relationship is not causal, we are often still interested in predicting the value of one variable from a known value of the other variable.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Notation and convention</title>
+        <p>
+          If the variables can be classified as an explanatory variable and a response, we use the letter <m>X</m> to denote the explanatory variable and <m>Y</m> to denote the response.
+        </p>
+        <p>
+          <alert>Important:</alert> Always draw the response variable, <m>Y</m>, on the vertical axis of a scatterplot and <m>X</m> on the horizontal axis.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Predicting the response</title>
+        <p>
+          The correlation coefficient describes the <em>strength</em> of a relationship, but does not help you to predict <m>Y</m> from <m>X</m>.
+        </p>
+        <p>
+          A curve or straight line that is drawn close to the crosses on a scatterplot (by eye or by any other method) is called a <term>regression line</term> and can be used to 'read off' the <m>y</m>-value corresponding to any <m>x</m>.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-linear-models">
+      <title>Linear Models</title>
+      <p>
+        A straight line can often be used to predict one variable from another.
+      </p>
+      
+      <assemblage>
+        <title>Equation to describe a regression line</title>
+        <p>
+          A regression line could be drawn 'by eye' through a scatterplot, but we restrict attention to simple mathematical functions
+          <me>
+            y = f(x)
+          </me>
+          since they are easier and more objective to use.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Linear model</title>
+        <p>
+          Some relationships must be described by curves, but a straight line is an adequate description of many bivariate data sets.
+          <me>
+            y = b_0 + b_1 x
+          </me>
+        </p>
+        <p>
+          The constant <m>b_0</m> is the <term>intercept</term> of the line and describes the <m>y</m>-value when <m>x</m> is zero. The constant <m>b_1</m> is the line's <term>slope</term>; it describes the change in <m>y</m> when <m>x</m> increases by one.
+        </p>
+        <p>
+          The predicted response at any <m>x</m>-value is
+          <me>
+            \hat{y} = b_0 + b_1 x
+          </me>
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-fitted-residuals">
+      <title>Fitted Values and Residuals</title>
+      <p>
+        The difference between the actual value of <m>Y</m> and the value predicted by a line is called a residual. Small residuals are clearly desirable.
+      </p>
+      
+      <assemblage>
+        <title>Fitted values</title>
+        <p>
+          To assess how well a particular linear model fits any one of our data points, <m>(x_i, y_i)</m>, we might consider how well the model would predict the <m>y</m>-value of the point,
+          <me>
+            \hat{y}_i = b_0 + b_1 x_i
+          </me>
+          These predictions are called <term>fitted values</term>.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Residuals</title>
+        <p>
+          The difference between the <m>i</m>'th fitted values and its actual <m>y</m>-value is called its <term>residual</term>.
+          <me>
+            e_i = y_i - \hat{y}_i
+          </me>
+        </p>
+        <p>
+          The residuals describe the 'errors' that would have resulted from using the model to predict <m>y</m> from the <m>x</m>-values of our data points.
+        </p>
+        <p>
+          <!-- TODO: Add image showing residuals as vertical distances -->
+        </p>
+        <p>
+          Note that the residuals are the <em>vertical distances of the crosses to the line</em>.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-least-squares-method">
+      <title>Least Squares</title>
+      <p>
+        The sum of squared residuals describes the accuracy of predictions from a line. The method of least squares positions the line to minimise the sum of squared residuals.
+      </p>
+      
+      <assemblage>
+        <title>Aim of small residuals</title>
+        <p>
+          The residuals from a linear model (vertical distances from the crosses to the line) indicate how closely the model's predictions match the actual responses in the data.
+        </p>
+        <p>
+          'Good' values for <m>b_0</m> and <m>b_1</m> can be objectively chosen to be the values that minimise the residual sum of squares. This is the <term>method of least squares</term> and the values of <m>b_0</m> and <m>b_1</m> are called <term>least squares estimates</term>.
+        </p>
+        <p>
+          The diagram below represents the squared residuals as blue squares. The least squares estimates minimise the total blue area.
+        </p>
+        <p>
+          <!-- TODO: Add image showing least squares visualization -->
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-curvature-outliers">
+      <title>Curvature and Outliers</title>
+      <p>
+        A linear model is not appropriate if there are either curvature or outliers in a scatterplot of the data. Outliers should be carefully examined.
+      </p>
+      
+      <assemblage>
+        <title>Nonlinear relationships</title>
+        <p>
+          A simple linear model is only appropriate when the cloud of crosses in a scatterplot of the data is regularly spread around a straight line. If the crosses are scattered round a <em>curve</em>, the relationship is called <term>nonlinear</term> and other models must be used.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Outliers</title>
+        <p>
+          Another problem arises if there are <term>outliers</term><mdash/>observations that do not conform to the pattern and variability exhibited by the rest of the data. In a linear model, the most important type of outlier is a data point that lies at a distance from the line that would fit through the rest of the data.
+        </p>
+        <p>
+          The individual corresponding to any outlier should be carefully examined. Recording or transcription errors may be the cause. Alternatively, it may be possible to determine some distinguishing characteristic of the individual that underlies the unusual response measurement.
+        </p>
+        <p>
+          If an outlier is extreme enough, or if a special cause for its unusual behaviour can be found from outside information, the individual can be classified as aberrant and deleted from the data set.
+        </p>
+        <p>
+          <alert>Important:</alert> It is important to <em>look at any data set graphically</em> before fitting a linear model to check that no curvature or outliers is present.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-residual-plots">
+      <title>Residual Plots</title>
+      <p>
+        Outliers and curvature in the relationship are often displayed more clearly in a plot of residuals.
+      </p>
+      
+      <assemblage>
+        <title>Detecting problems with the model</title>
+        <p>
+          If outliers or curvature are present in a data set, they are often visible in a scatterplot of the response against the explanatory variable. However these features are usually clearer if the <term>residuals</term> are plotted against <m>X</m> rather than the original response.
+        </p>
+        <p>
+          <!-- TODO: Add image showing residual plots -->
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-predicting-x-from-y">
+      <title>Predicting Y and Predicting X (advanced)</title>
+      <p>
+        Least squares does not treat <m>Y</m> and <m>X</m> symmetrically. The best line for predicting <m>Y</m> from <m>X</m> is different from the best line for predicting <m>X</m> from <m>Y</m>.
+      </p>
+      
+      <assemblage>
+        <title>Different lines are used to predict Y and to predict X</title>
+        <p>
+          The least squares line for predicting <m>Y</m> from <m>X</m>,
+          <me>
+            y = b_0 + b_1 x
+          </me>
+          minimises the sum of squared <em>vertical</em> distances between the points on a scatterplot and the line. On the other hand, if we are interested in predicting <m>X</m> from <m>Y</m> using a line,
+          <me>
+            x = c_0 + c_1 y
+          </me>
+          the residuals are the <em>horizontal</em> distances between the points and the line, and least squares minimises their sum of squares.
+        </p>
+        <p>
+          Different lines minimise the sum of squares of horizontal and vertical distances.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>About the two least squares lines</title>
+        <p>
+          The two least squares lines can be written in terms of standardised variables,
+        </p>
+        <p>
+          Equation of least squares line to predict <m>Y</m> from <m>X</m>:
+          <me>
+            z_y = r \cdot z_x
+          </me>
+        </p>
+        <p>
+          Equation of least squares line to predict <m>X</m> from <m>Y</m>:
+          <me>
+            z_x = r \cdot z_y
+          </me>
+        </p>
+        <p>
+          where <m>r</m> is the correlation coefficient between <m>X</m> and <m>Y</m>. Since <m>r</m> is always less than 1, the least squares line for predicting <m>Y</m> from <m>X</m> is the more horizontal (closer to being parallel to the <m>x</m>-axis) of the two lines.
+        </p>
+        <p>
+          <!-- TODO: Add image showing the two least squares lines -->
+        </p>
+      </assemblage>
+    </subsection>
+  </section>
+
+  <!-- Section 5: Nonlinear Relationships -->
+  <section xml:id="sec-nonlinear-relationships">
+    <title>Nonlinear Relationships</title>
+
+    <subsection xml:id="subsec-transformations-correlation">
+      <title>Transformations and Correlation</title>
+      <p>
+        The correlation coefficient does not adequately describe the strength of a nonlinear relationship. Transforming the variables to linearise the relationship helps.
+      </p>
+      
+      <assemblage>
+        <title>Correlation coefficient and nonlinear relationships</title>
+        <p>
+          The correlation coefficient, <m>r</m>, is a good description of the strength of linear relationship but not nonlinear ones. If a scatterplot shows marked curvature, the correlation coefficient can considerably understate the strength of the relationship.
+        </p>
+      </assemblage>
+      
+      <assemblage>
+        <title>Transform the variables to linearise the relationship</title>
+        <p>
+          Nonlinear transformations of <m>X</m> and <m>Y</m> alters the shape of the relationship. It is often possible to linearise a relationship by transforming one or both variables.
+        </p>
+        <p>
+          The strength of a nonlinear relationship can therefore be described with the correlation coefficient after a transformation to one or both variables has been applied to <em>remove the nonlinearity</em>.
+        </p>
+        <p>
+          <!-- TODO: Add image showing linearization through transformation -->
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-transformations-models">
+      <title>Transformations and Models</title>
+      <p>
+        If a relationship is nonlinear, a linear model can often be fitted to transformed response or explanatory variables.
+      </p>
+      
+      <assemblage>
+        <title>Linear model with transformed variables</title>
+        <p>
+          If the relationship between <m>Y</m> and <m>X</m> is nonlinear, a linear model will give poor predictions and must be avoided.
+        </p>
+        <p>
+          However, by transforming one or both of the variables, it is often possible to linearise the relationship and therefore use least squares to fit a linear model to the transformed variables.
+        </p>
+        <p>
+          <!-- TODO: Add image showing model fit after transformation -->
+        </p>
+        <p>
+          A logarithmic transformation of either <m>Y</m> or <m>X</m> often works, but a more general power transformation is sometimes needed to linearise the relationship.
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-quadratic-models">
+      <title>Quadratic Models</title>
+      <p>
+        An alternative solution to nonlinearity is to fit a quadratic curve the data, again using the principle of least squares.
+      </p>
+      
+      <assemblage>
+        <title>Adding a quadratic term</title>
+        <p>
+          An alternative solution to the problem of curvature is to extend the simple linear model with the addition of a quadratic term,
+          <me>
+            y = b_0 + b_1 x + b_2 x^2
+          </me>
+        </p>
+        <p>
+          Fitted values and residuals are defined (and interpreted) in a similar way to those for a linear model,
+          <md>
+            <mrow>\hat{y}_i \amp= b_0 + b_1 x_i + b_2 x_i^2</mrow>
+            <mrow>e_i \amp= y_i - \hat{y}_i</mrow>
+          </md>
+        </p>
+        <p>
+          As in a linear model, the quadratic model's residuals are the vertical distances between the crosses in a scatterplot and the curve. We again use <term>least squares</term> to estimate the unknown parameters<mdash/>choose values of the three parameters to minimise the residual sum of squares,
+          <me>
+            \text{RSS} = \sum_{i=1}^{n} e_i^2 = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+          </me>
+        </p>
+        <p>
+          <!-- TODO: Add image showing quadratic fit -->
+        </p>
+      </assemblage>
+    </subsection>
+
+    <subsection xml:id="subsec-extrapolation">
+      <title>Dangers of Extrapolation</title>
+      <p>
+        Since the form of a relationship is unknown beyond the range of <m>x</m>-values in the data, it is always dangerous to extrapolate.
+      </p>
+      
+      <assemblage>
+        <title>The shape of a relationship is only known around the data</title>
+        <p>
+          The models that we have used to describe the relationship between a response, <m>Y</m>, and explanatory variable, <m>X</m>, are usually only approximations to the 'real' relationship. For example, a scatterplot may <em>look</em> linear, but we really have no information about the shape of the relationship beyond our data.
+        </p>
+        <p>
+          <!-- TODO: Add image showing extrapolation danger -->
+        </p>
+        <p>
+          A model may be useful for predicting <m>Y</m> from values of <m>X</m> that are within the range of <m>x</m>-values in our data, but we should be very cautious about using it to predict <m>Y</m> outside this range. This is called <term>extrapolation</term> and it can be badly in error.
+        </p>
+        <p>
+          <alert>IMPORTANT:</alert> Avoid using a model to predict <m>Y</m> far beyond the available data.
+        </p>
+      </assemblage>
+    </subsection>
   </section>
 
 </chapter>
+

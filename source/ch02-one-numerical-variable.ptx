@@ -1,26 +1,1885 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-one-numerical-variable" xmlns:xi="http://www.w3.org/2001/XInclude">
+<part xml:id="part-one-numerical-variable" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>One Numerical Variable</title>
 
   <introduction>
     <p>
-      This chapter explores methods for analyzing and visualizing a single numerical variable.
+      Data may have a rich structure, but we first concentrate on the simplest data structure, a single numerical measurement from each 'individual' in a group. We call data of this form a batch of numbers, or a univariate numerical data set.
+    </p>
+    <p>
+      Examples of the types of 'individuals' from which we often record data are:
+    </p>
+    <ul>
+      <li><p>People</p></li>
+      <li><p>Plants</p></li>
+      <li><p>Samples of output from a manufacturing process</p></li>
+      <li><p>Admissions of patients to a hospital</p></li>
+    </ul>
+    <p>
+      In this chapter, we describe several common ways to display the variability in a batch of numerical data. We show how such data can provide useful information.
     </p>
   </introduction>
 
-  <section xml:id="sec-one-num-1">
-    <title>Section 1</title>
-    <p>
-      <!-- Add content here -->
-    </p>
-  </section>
+  <!-- Section 1: Graphical Display of Values -->
+  <chapter xml:id="ch-graphical-display">
+    <title>Graphical Display of Values</title>
+    
+    <introduction>
+      <p>
+        Dot plots and stem and leaf plots show each value in a data set graphically.
+      </p>
+    </introduction>
 
-  <section xml:id="sec-one-num-2">
-    <title>Section 2</title>
-    <p>
-      <!-- Add content here -->
-    </p>
-  </section>
+    <section xml:id="sec-analysing-variation">
+      <title>Analysing Variation</title>
+      <p>
+        Meaningful information can be obtained from variation in the values of a variable.
+      </p>
+      
+      <paragraphs>
+        <title>Information from the variation in data</title>
+        <p>
+          Variation in data is not simply an annoyance <mdash/> the variation itself can hold important information.
+        </p>
+        <p>
+          Simply sorting a data set into order can highlight features that are not obvious in the raw data, such as the lack of values between 3.4 and 4.9 in the data below.
+        </p>
+        <table>
+          <title>Unsorted data</title>
+          <tabular>
+            <row><cell>6.1</cell><cell>5.2</cell><cell>7.9</cell><cell>2.3</cell><cell>3.4</cell></row>
+            <row><cell>1.4</cell><cell>5.3</cell><cell>7.1</cell><cell>3.2</cell><cell>2.8</cell></row>
+            <row><cell>5.1</cell><cell>6.9</cell><cell>6.1</cell><cell>3.4</cell><cell>5.2</cell></row>
+            <row><cell>5.5</cell><cell>2.0</cell><cell>1.3</cell><cell>4.9</cell><cell>6.4</cell></row>
+          </tabular>
+        </table>
+      </paragraphs>
+    </section>
 
-</chapter>
+    <section xml:id="sec-basic-dot-plot">
+      <title>Basic Dot Plot</title>
+      <p>
+        A dot plot displays each value as a cross along a numerical axis.
+      </p>
+      
+      <paragraphs>
+        <title>Dot plots</title>
+        <p>
+          Some ranges of values are more common than others <mdash/> they have higher density.
+        </p>
+        <p>
+          The simplest graphical display of data that shows where there is high and low density is a dot plot. This shows each value as a cross (or dot) against a numerical axis.
+        </p>
+        <p>
+          The gap between 3.4 and 4.9 is more obvious on a dot plot than in a textual list of values, whether ordered or not.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-jittered-dot-plot">
+      <title>Jittered Dot Plot</title>
+      <p>
+        Jittering is a modification to the basic dot plot that avoids some problems associated with overlapping crosses.
+      </p>
+      
+      <paragraphs>
+        <title>Jittering the crosses</title>
+        <p>
+          In all but the smallest data sets, the crosses on a basic dot plot overlap, making it difficult to identify regions of high density.
+        </p>
+        <p>
+          Randomly moving crosses away from the axis reduces this problem by separating the crosses:
+        </p>
+        <p>
+          Note that the vertical jittering is random and therefore tells you nothing about the data.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-stacked-dot-plots">
+      <title>Stacked Dot Plots</title>
+      <p>
+        Stacking of the crosses is an alternative to jittering that highlights ranges of high or low density.
+      </p>
+      
+      <paragraphs>
+        <title>Stacked dot plots</title>
+        <p>
+          Stacking the crosses into columns is usually better than jittering them.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          Stacking highlights regions of high density well (tall stacks).
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-stems-leaf-plots">
+      <title>Stems and Leaf Plots</title>
+      <p>
+        Stem and leaf plots are similar to stacked dot plots, but a digit is used instead of a cross to retain extra information.
+      </p>
+      
+      <paragraphs>
+        <title>Digits instead of crosses</title>
+        <p>
+          Stem and leaf plots are closely related to stacked dot plots. The crosses are replaced by digits that provide a little more detail about the values that they represent.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Stem and Leaf</title>
+        <p>
+          In a stem and leaf plot, the axis is replaced by a column of 'stems' <mdash/> the most significant digits of the values in the data. The digits that replace the crosses are called 'leaves' and give a further significant digit of each value on a stem.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          A final refinement is to sort the leaves into increasing order on each stem.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-splitting-stems">
+      <title>Splitting the Stems</title>
+      <p>
+        To increase the flexibility of the display, each stem may be repeated either 2 or 5 times, increasing the number of classes in the basic stem and leaf plot by a factor of 2 or 5.
+      </p>
+      
+      <paragraphs>
+        <title>Need for more flexibility</title>
+        <p>
+          Sometimes basic stem and leaf plots are not flexible enough <mdash/> there would be either too many or too few rows of leaves to show the varying density well.
+        </p>
+        <p>
+          Repeating each stem 2 times (with leaves 0-4 on the lower copy and leaves 5-9 on the upper one) or 5 times (with leaves 0-1, 2-3, 4-5, 6-7 and 8-9 on the different copies) gives intermediate numbers of stems.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-drawing-stem-leaf">
+      <title>Drawing Stem and Leaf Plots</title>
+      <p>
+        For data analysis, stem and leaf plots are rarely more informative than stacked dot plots, but they are easy to draw by hand.
+      </p>
+      
+      <paragraphs>
+        <title>Smoothness</title>
+        <p>
+          When drawing a stem and leaf plot, the aim is for a smooth shape to the stem and leaf plot, and this is usually achieved by between 10 and 20 rows of leaves.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Drawing by hand</title>
+        <p>
+          When data are analysed on a computer, a stacked dot plot usually describes a distribution of values more clearly than a stem and leaf plot.
+        </p>
+        <p>
+          However stem and leaf plots are easy to draw by hand:
+        </p>
+        <ul>
+          <li><p>Decide on the stems to use <mdash/> usually between 10 and 20 of them.</p></li>
+          <li><p>Scan down the values identifying the leaf digits and writing them against the value's stem.</p></li>
+          <li><p>Finally, sort the leaves on each stem into order.</p></li>
+        </ul>
+        <p>
+          To simplify drawing, values are truncated to give their stems and leaf digits, not rounded. For example, 7.98 and 7.90 would both be displayed as leaf '9' on the stem '7'.
+        </p>
+      </paragraphs>
+    </section>
+  </chapter>
+
+  <!-- Section 2: Understanding Distributions -->
+  <chapter xml:id="ch-understanding-distributions">
+    <title>Understanding Distributions</title>
+
+    <section xml:id="sec-outliers">
+      <title>Outliers</title>
+      <p>
+        Does the data contain any outliers <mdash/> values that are atypically large or small? The extreme values in a skew distribution are often mistaken for outliers.
+      </p>
+      
+      <paragraphs>
+        <title>Outliers</title>
+        <p>
+          Values that are considerably larger or smaller than the bulk of the data are called <term>outliers</term>.
+        </p>
+        <p>
+          An outlier may have been incorrectly recorded, or there may have been other anomalous circumstances associated with it. Outliers must be carefully checked if possible. If anything atypical can be found, outliers should be deleted from the data set and their deletion noted in any reports about the data.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Outliers and skew distributions</title>
+        <p>
+          Deciding whether a value is an outlier or not is affected by the shape of the distribution of values for the rest of the data.
+        </p>
+        <p>
+          <em>Symmetric distribution</em>
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          <em>Skew distribution</em>
+        </p>
+        <p>
+          A distribution with a long tail to one side is called a <term>skew distribution</term> <mdash/> positively skew if the long tail is to the right and negatively skew if the long tail is to the left. It is not unusual for the extreme value in a very skew distribution to be a fair distance from the other values and may not be an outlier.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-clusters">
+      <title>Clusters</title>
+      <p>
+        Does the data split into separate clusters <mdash/> ranges of values with high density separated by ranges with low density? Clusters may correspond to different groups of individuals.
+      </p>
+      
+      <paragraphs>
+        <title>Clusters</title>
+        <p>
+          If a dot plot, stem and leaf plot or histogram separates into two or more groups of values (<term>clusters</term>), this suggests that there may be more fundamental differences between the 'individuals' in the groups.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          Further investigation should be made of the individuals in the clusters to find whether they also differ in other ways.
+        </p>
+        <p>
+          If the clusters were less distinct, especially in small data sets, you would need external supporting evidence before concluding that the individuals separated into meaningful groups.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-distribution-values">
+      <title>Distribution of Values</title>
+      <p>
+        The distribution gives information about a typical value round which the data are spread (the distribution's location or centre) and the variability of the values (the spread of the distribution).
+      </p>
+      
+      <paragraphs>
+        <title>Distribution of values</title>
+        <p>
+          Even when a data set has no outliers or clusters, the distribution of values also contains useful information. Important features are:
+        </p>
+        <ul>
+          <li><p>The centre or location of the distribution <mdash/> a 'typical value'</p></li>
+          <li><p>The spread or variability of the distribution</p></li>
+          <li><p>Whether a distribution is symmetric or skew <mdash/> do the tails appear similar at both sides?</p></li>
+          <li><p>Other aspects of the shape of the distribution</p></li>
+        </ul>
+        <p>
+          The concepts of centre and spread are particularly important.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-names-individuals">
+      <title>Names of Individuals</title>
+      <p>
+        Additional information about the items from which measurements have been made can help us understand the distribution of values in the data.
+      </p>
+      
+      <paragraphs>
+        <title>Extra information</title>
+        <p>
+          When only a single value is known from each individual (or plant, item, etc), all that can be discovered is the shape of the distribution of these values.
+        </p>
+        <p>
+          Additional information about each individuals may give insight into why some values are bigger or smaller than others. Different types of information may be available. The simplest is a unique name for the individuals <mdash/> a textual label. These names may help us to understand why values are outliers or group into clusters in a dot plot or stem and leaf plot.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-distinguishing-groups">
+      <title>Distinguishing Known Groups</title>
+      <p>
+        If we know that the values come from 2 or more groups of individuals, dot plots can be modified to show this extra information.
+      </p>
+      
+      <paragraphs>
+        <title>Multiple groups of individuals</title>
+        <p>
+          Sometimes we know that the individuals belong to two or more groups before the data are collected or, equivalently, that they have different values of an extra categorical variable.
+        </p>
+        <p>
+          Information about groups is best displayed by plotting the separate groups against a common axis.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Back-to-back stem and leaf plots</title>
+        <p>
+          Stem and leaf plots can be used to compare two groups of individuals, if drawn on different sides of a common column of stems. (They are less useful if there are three or more groups.)
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-dangers-overinterpretation">
+      <title>Dangers of Overinterpretation</title>
+      <p>
+        There is a risk of over-interpreting patterns in small data sets.
+      </p>
+      
+      <assemblage>
+        <title>Warning: Features in the distribution of a small data set may not be meaningful</title>
+        <p>
+          Be careful not to overinterpret patterns in small data sets. Clusters, outliers or skewness may appear by chance even if there is no meaningful basis to these features.
+        </p>
+        <p>
+          Pronounced outliers or clusters may be taken as indicative of something meaningful in the underlying process. However less pronounced outliers or clusters must be supported by outside evidence before these features can be interpreted as meaningful.
+        </p>
+      </assemblage>
+    </section>
+  </chapter>
+
+  <!-- Section 3: Histograms and Density -->
+  <chapter xml:id="ch-histograms-density">
+    <title>Histograms and Density</title>
+
+    <section xml:id="sec-density-values">
+      <title>Density of Values</title>
+      <p>
+        The heights of the stacks of crosses in a dot plot describe the density of values.
+      </p>
+      
+      <paragraphs>
+        <title>Density</title>
+        <p>
+          In a stacked dot plot (or stem and leaf plot), the highest stacks contain the most values. These stacks have the highest density of values.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          Histograms more directly show how density varies along the axis.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-histogram-equal-widths">
+      <title>Histogram with Equal Class Widths</title>
+      <p>
+        In a simple histogram, the height of the rectangle above each class on the axis equals the number of values in the class <mdash/> the class frequency.
+      </p>
+      
+      <paragraphs>
+        <title>Histograms</title>
+        <p>
+          In a simple histogram, the axis is split into sub-intervals of equal width called <term>classes</term>. A rectangle is drawn above each class with height equal to the number of values in the class <mdash/> the <term>frequency</term> of the class.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-choice-classes">
+      <title>Choice of Classes</title>
+      <p>
+        Class width and start-point should be chosen to make the histogram as smooth as possible <mdash/> neither too blocky nor too jagged.
+      </p>
+      
+      <paragraphs>
+        <title>Aim of a 'smooth' histogram</title>
+        <p>
+          There is considerable freedom in the choice of histogram classes. The exact shape depends on:
+        </p>
+        <ul>
+          <li><p>Class width</p></li>
+          <li><p>Start value for first class</p></li>
+        </ul>
+        <p>
+          We usually choose classes with the aim of smoothness in the outline of the histogram rectangles.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          The choice of 'best' classes is subjective, but...
+        </p>
+        <assemblage>
+          <title>WARNING</title>
+          <p>
+            If your conclusions about what a histogram tells you about the data depend on the choice of histogram classes, you are over-interpreting its shape.
+          </p>
+        </assemblage>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-histograms-small-data">
+      <title>Histograms of Small Data Sets</title>
+      <p>
+        The shape of a histogram can be very dependent on the choice of classes if the data set is small; beware over-interpreting its shape. Stacked dot plots are a better display of small data sets.
+      </p>
+      
+      <paragraphs>
+        <title>Warning for small data sets</title>
+        <p>
+          For small data sets, changing the class width and the starting position for the first class can give a surprising amount of variability in histogram shape, so be extremely wary of over-interpreting features such as clusters or skewness.
+        </p>
+        <p>
+          Indeed, it is probably better to avoid using histograms unless there is a reasonable number of values <mdash/> stacked dot plots are far less likely to mislead you over minor features.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-relative-frequency-area">
+      <title>Relative Frequency and Area</title>
+      <p>
+        In a histogram, the proportion of the total area that is above any class equals the relative frequency of the class.
+      </p>
+      
+      <paragraphs>
+        <title>Relative frequency</title>
+        <p>
+          When all histogram classes are of equal width, histograms are often drawn with a vertical axis giving the frequencies (counts) for each class. The vertical axis can alternatively be labelled with the relative frequencies (proportions) for the classes.
+        </p>
+        <p>
+          (There is no harm in including both axes.)
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Area equals relative frequency</title>
+        <p>
+          An important property of histograms is that the proportion of values in one or more classes equals the proportion of the histogram area above these classes.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          <em>Therefore: Relative frequency = proportion of the total area</em>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-comparing-groups-histograms">
+      <title>Comparing Groups</title>
+      <p>
+        The vertical axis should be relative frequency, not frequency, when comparing two groups with histograms. Population pyramids are often used to compare age distributions.
+      </p>
+      
+      <paragraphs>
+        <title>Relative frequencies to compare two groups</title>
+        <p>
+          Histograms may be superimposed to compare two groups. However if the groups differ in size, it is usually more meaningful to compare relative frequencies (proportions) than the counts in the classes.
+        </p>
+        <p>
+          <em>Use relative frequency histograms to compare groups.</em>
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-varying-class-widths">
+      <title>Histograms with Varying Class Widths</title>
+      <p>
+        If a histogram has varying class widths, the vertical axis must be 'density'. The histogram shape would be misleading if frequency or relative frequency was used for the vertical axis.
+      </p>
+      
+      <paragraphs>
+        <title>Mixed Class Widths</title>
+        <p>
+          For some data sets, wider classes give a smoother histogram in some ranges of values (e.g. in the tail of a distribution) and narrower classes are better in other parts of the distribution (usually where there is greater density of values).
+        </p>
+        <p>
+          In a correctly drawn histogram, each value contributes the same area.
+        </p>
+        <p>
+          Histograms can be drawn with mixed class widths, but it would be badly misleading to make the rectangle heights equal to either the class frequency or relative frequency.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-understanding-histograms">
+      <title>Understanding Histograms</title>
+      <p>
+        The proportion of values in any classes always equals the proportion of the total histogram area that is above the classes.
+      </p>
+      
+      <paragraphs>
+        <title>Area and proportion of values</title>
+        <p>
+          The details of drawing histograms by hand with varying class widths are unimportant <mdash/> a computer should be used. To interpret their shape remember that:
+        </p>
+        <p>
+          <em>The proportion of the total area above any classes equals the proportion of values in them</em>
+        </p>
+        <p>
+          For example,
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-frequency-polygons">
+      <title>Frequency Polygons</title>
+      <p>
+        Frequency polygons are closely related to histograms but give a less 'blocky' display of density. Different groups can be compared more easily with them.
+      </p>
+      
+      <paragraphs>
+        <title>Frequency polygons</title>
+        <p>
+          A frequency polygon is closely related to a histogram with equal class widths. It joins the midpoints of the tops of the class rectangles and tends to give a smoother outline than the corresponding histogram.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          It is easier to distinguish and compare superimposed frequency polygons for two groups than the corresponding histograms.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-kernel-density">
+      <title>Kernel Density Estimates (optional)</title>
+      <p>
+        Kernel density estimates show density in a still smoother display.
+      </p>
+      
+      <paragraphs>
+        <title>Kernel density estimates</title>
+        <p>
+          A kernel density estimate is an alternative to a histogram that often results in a smoother display of the density of values. Each data value on the axis is replaced by a 'blob' of ink (kernel) and these kernels are stacked.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          The widths of the kernels can be adjusted <mdash/> if they are too narrow, the display becomes jagged, but if they are too wide, the display becomes too spread out and detail is lost.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-drawing-histograms">
+      <title>Drawing Histograms by Hand (optional)</title>
+      <p>
+        Histograms are based on frequency tables. Class boundaries should avoid possible data values.
+      </p>
+      
+      <paragraphs>
+        <title>Frequency table</title>
+        <p>
+          A computer is normally used to draw histograms. Hand-drawn histograms are based on a frequency table that lists the histogram classes and their frequencies.
+        </p>
+        <p>
+          To avoid ambiguity in the histogram, the class boundaries should be chosen to ensure that no data values are on boundaries. For example,
+        </p>
+        <table>
+          <title>Frequency table example</title>
+          <tabular>
+            <row header="yes">
+              <cell>Data values</cell>
+              <cell>Class</cell>
+              <cell>Frequency</cell>
+            </row>
+            <row>
+              <cell>1.0 - 1.9</cell>
+              <cell><m>0.95 \leq x \lt 1.95</m></cell>
+              <cell>2</cell>
+            </row>
+            <row>
+              <cell>2.0 - 2.9</cell>
+              <cell><m>1.95 \leq x \lt 2.95</m></cell>
+              <cell>3</cell>
+            </row>
+            <row>
+              <cell>3.0 - 3.9</cell>
+              <cell><m>2.95 \leq x \lt 3.95</m></cell>
+              <cell>3</cell>
+            </row>
+            <row>
+              <cell>4.0 - 4.9</cell>
+              <cell><m>3.95 \leq x \lt 4.95</m></cell>
+              <cell>1</cell>
+            </row>
+            <row>
+              <cell>5.0 - 5.9</cell>
+              <cell><m>4.95 \leq x \lt 5.95</m></cell>
+              <cell>5</cell>
+            </row>
+            <row>
+              <cell>6.0 - 6.9</cell>
+              <cell><m>5.95 \leq x \lt 6.95</m></cell>
+              <cell>4</cell>
+            </row>
+            <row>
+              <cell>7.0 - 7.9</cell>
+              <cell><m>6.95 \leq x \lt 7.95</m></cell>
+              <cell>2</cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell>20</cell>
+            </row>
+          </tabular>
+        </table>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Height of a histogram rectangle</title>
+        <p>
+          To draw a histogram by hand with equal class widths, each class rectangle can be drawn with height equal to its class frequency. If class widths vary, we need to calculate the density for each class with the formula:
+        </p>
+        <p>
+          <me>\text{Density} = \frac{\text{Relative frequency of class}}{\text{Class width}}</me>
+        </p>
+        <p>
+          and use this for the rectangle heights.
+        </p>
+      </paragraphs>
+    </section>
+  </chapter>
+
+  <!-- Section 4: Median, Quartiles, and Boxplots -->
+  <chapter xml:id="ch-median-quartiles-boxplots">
+    <title>Median, Quartiles, and Boxplots</title>
+    
+    <introduction>
+      <p>
+        Box plots highly summarise the distribution of values in a data set. They are useful for comparing different batches of values.
+      </p>
+    </introduction>
+
+    <section xml:id="sec-need-summarise">
+      <title>The Need to Summarise</title>
+      <p>
+        Histograms are based on frequency tables. Class boundaries should avoid possible data values.
+      </p>
+      
+      <paragraphs>
+        <title>Unhelpful detail when comparing groups</title>
+        <p>
+          Dot plots, stem and leaf plots and histograms contain a lot of detail about the distribution of values in a data set. This level of detail is useful when examining a single data set, but when several groups of values are being compared, the detail distracts from the main differences between the groups.
+        </p>
+        <p>
+          For example, the jittered dot plots below do not concisely summarise the differences between the five groups.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-median-quartiles-boxplot">
+      <title>Median, Quartiles, and Boxplot</title>
+      <p>
+        The median and quartiles split a batch of values into four equal-sized sets of values. A box plot is a graphical display of the median, quartiles and extremes.
+      </p>
+      
+      <paragraphs>
+        <title>Five-number summary</title>
+        <p>
+          Five values are enough to capture a lot of information about the distribution of values in a data set.
+        </p>
+        <ul>
+          <li><p>The two extremes (i.e. the minimum and maximum values).</p></li>
+          <li><p>The lower quartile, median and upper quartile.</p></li>
+        </ul>
+        <p>
+          These values split the data set into four groups with approximately equal numbers of values.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Box plot</title>
+        <p>
+          A box plot displays the five-number summary graphically.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Details</title>
+        <p>
+          The median, <m>m</m>, is the middle value if there is an odd number of values in the data set. If there is an even number of values, the median is the average of the middle two.
+        </p>
+        <p>
+          Different authors give slightly different definitions for the upper and lower quartiles. One definition of the lower quartile is the median of the lowest half of the data <mdash/> i.e. of the values lower than <m>m</m>. (The upper quartile would then be defined as the median of the top half of the values.)
+        </p>
+        <p>
+          <alert>Important:</alert> Provided you are consistent, different definitions of the quartiles should lead you to the same conclusions.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-interpreting-boxplot">
+      <title>Interpreting a Box Plot's Shape</title>
+      <p>
+        A box plot clearly shows the centre, spread and skewness of a data set. It splits the corresponding histogram into 4 approximately equal areas.
+      </p>
+      
+      <paragraphs>
+        <title>Box plots and histograms</title>
+        <p>
+          Since the median and quartiles split the data set into quartiles, they also split a histogram of the data into four approximately equal areas.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>What does a box plot tell you about the distribution?</title>
+        <p>
+          <em>Centre</em>
+        </p>
+        <p>
+          The median gives an indication of the centre of the distribution.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          <em>Spread</em>
+        </p>
+        <p>
+          The width of the box (the interquartile range) and the difference between the maximum and minimum (range) both give an indication of the spread of values.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          <em>Skewness</em>
+        </p>
+        <p>
+          The distances of the minimum and lower quartile to the median, in relation to the corresponding distances of the maximum and upper quartile give information about the skewness of the distribution. If the maximum and upper quartile are further from the median, the distribution is skew with a long tail of higher values.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-displaying-outliers">
+      <title>Displaying Outliers</title>
+      <p>
+        The basic box plot is often modified to display outliers as separate crosses.
+      </p>
+      
+      <paragraphs>
+        <title>Outliers and skew distributions</title>
+        <p>
+          Basic box plots cannot show whether the minimum and maximum in a distribution are outliers or simply the end of skew distributions.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-clusters-boxplots">
+      <title>Clusters</title>
+      <p>
+        Box plots cannot show clusters, so must never be used for data with clusters.
+      </p>
+      
+      <paragraphs>
+        <title>Box plots and clusters</title>
+        <p>
+          Box plots cannot show clusters in data.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          Before using a box plot, always look at the data with a dot plot or histogram to make sure that there are no clusters.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-comparison-groups-boxplots">
+      <title>Comparison of Groups</title>
+      <p>
+        Box plots are particularly effective for displaying differences between several groups of values.
+      </p>
+      
+      <paragraphs>
+        <title>Box plots to compare groups</title>
+        <p>
+          To display the distribution of values in a single set of data, a dot plot or histogram is more useful than a box plot. However for comparison of two or more groups of values box plots are particularly effective <mdash/> they highlight differences between the centres, spreads of values and skewness of the groups.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-dangers-overinterpretation-boxplots">
+      <title>Dangers of Overinterpretation</title>
+      <p>
+        Box plots are relatively stable, and contain less 'noise' than other displays. They can concisely describe differences between even small groups.
+      </p>
+      
+      <paragraphs>
+        <title>Stability of the shape of box plots</title>
+        <p>
+          When used for small data sets, features in dot plots, stem and leaf plots and histograms are relatively unstable. Although more stable, the shapes of box plots also vary if different data are collected from the same process.
+        </p>
+        <p>
+          <alert>Important:</alert> Care must be taken not to over-interpret the shape of box plots for small data sets.
+        </p>
+        <p>
+          As with other displays, the larger the data set, the more stable the box plots become.
+        </p>
+      </paragraphs>
+    </section>
+  </chapter>
+
+  <!-- Section 5: Describing Centre and Spread -->
+  <chapter xml:id="ch-describing-centre-spread">
+    <title>Describing Centre and Spread</title>
+
+    <section xml:id="sec-centre-spread">
+      <title>Centre and Spread</title>
+      <p>
+        The centre of a distribution is a 'typical value'. The spread describes how far the values are from the centre.
+      </p>
+      
+      <paragraphs>
+        <title>Summarising centre and spread</title>
+        <p>
+          Two important aspects of a distribution of values are particularly important.
+        </p>
+        <p>
+          <em>Centre</em>
+        </p>
+        <p>
+          The centre is a 'typical' value around which the data are located.
+        </p>
+        <p>
+          <em>Spread</em>
+        </p>
+        <p>
+          The spread describes the distance of the individual values from the centre.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          We will describe centre and spread with numerical values called summary statistics. They provide particularly concise and meaningful comparisons of different groups.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-median-range-iqr">
+      <title>Median, Range, and IQR</title>
+      <p>
+        The median is a summary of the centre of a distribution. The range and inter-quartile range both describe spread.
+      </p>
+      
+      <paragraphs>
+        <title>Simple summaries of centre and spread</title>
+        <p>
+          <em>Centre</em>
+        </p>
+        <p>
+          The <term>median</term> is the simplest measure of centre. Half the data values are more than it, and half less.
+        </p>
+        <p>
+          <em>Spread</em>
+        </p>
+        <p>
+          The <term>range</term> (maximum - minimum) and <term>interquartile range</term> (upper quartile - lower quartile) are two different summary statistics that describe the spread of values in a data set.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Information from median and interquartile range</title>
+        <p>
+          Given the median and interquartile range, it is possible to sketch a bell-shaped histogram that matches these values. Such a 'guess' is often close to the actual distribution of values.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-summaries-centre">
+      <title>Summaries of Centre</title>
+      <p>
+        The median and mean are alternative measures of the centre of a distribution.
+      </p>
+      
+      <paragraphs>
+        <title>Median</title>
+        <p>
+          Half of the data values are below the median and half are above it:
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Mean</title>
+        <p>
+          The mean is:
+        </p>
+        <p>
+          <me>\bar{x} = \frac{\sum x}{n}</me>
+        </p>
+        <p>
+          If each value in a dot plot was a solid object resting on a beam with negligible mass, the mean is the value at which the beam will balance.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          Because of the leverage exerted by points far from the centre, the mean is further into the tail of a skew distribution than you might expect.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-properties-median-mean">
+      <title>Properties of Median and Mean</title>
+      <p>
+        When a data set is not symmetric, the mean and median may differ substantially.
+      </p>
+      <p>
+        Although both describe aspects of the 'centre' of a distribution, the median and mean are not the same and can occasionally have very different values.
+      </p>
+      
+      <paragraphs>
+        <title>Social vs economic indicator</title>
+        <p>
+          For some data sets, the median can be considered to be a social indicator, whereas the mean can be interpreted as an economic indicator. In a company,
+        </p>
+        <ul>
+          <li><p>the median salary indicates what the 'average employee' earns (half of the employees earn more and half earn less)</p></li>
+          <li><p>the mean salary reflects the total amount paid as salaries in the company (it is total / n)</p></li>
+        </ul>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Outliers</title>
+        <p>
+          An outlier has little effect on the median, but affects the mean more strongly. The median is said to be more robust.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Skew distributions</title>
+        <p>
+          When a distribution is fairly symmetrical, the mean and median are similar, but if the distribution is skew, then the mean is usually further into the tail of the distribution than the median.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-standard-deviation">
+      <title>Standard Deviation</title>
+      <p>
+        The standard deviation is the most commonly used numerical summary of the spread of values in a data set.
+      </p>
+      
+      <paragraphs>
+        <title>Simple measures of spread</title>
+        <p>
+          <em>Range</em>
+        </p>
+        <p>
+          Difference between maximum and minimum values
+        </p>
+        <p>
+          <em>Inter-quartile range</em>
+        </p>
+        <p>
+          The middle half of the values are within an interval of this length
+        </p>
+        <p>
+          These are (relatively) easy to understand and explain to others, but neither are commonly used.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Standard deviation</title>
+        <p>
+          The standard deviation is a 'typical' distance of values from the sample mean.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          The standard deviation is denoted by the letter <m>s</m> and is defined by:
+        </p>
+        <p>
+          <me>s = \sqrt{\frac{\sum(x - \bar{x})^2}{n-1}}</me>
+        </p>
+        <p>
+          The numerator depends on the distances of the values to the mean, so it will be small if the values are all close to the mean and big if they are far from the mean.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Variance</title>
+        <p>
+          The square of the standard deviation, <m>s^2</m>, is called the sample variance. Variances are sometimes reported and used but standard deviations are easier to interpret since they have the same units as the original data (e.g. kilograms or dollars).
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-rule-thumb-sd">
+      <title>Rule of Thumb for Standard Deviation</title>
+      <p>
+        The 70-95-100 rule-of-thumb is useful for understanding the numerical value of the standard deviation.
+      </p>
+      
+      <paragraphs>
+        <title>'Quarter-range' rule of thumb</title>
+        <p>
+          For many data sets, the standard deviation is just under a quarter of the range.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          This is a simple rule, but is only very approximate. The standard deviation can be more than a quarter the range in distributions with short tails or much less if there are long tails or outliers.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>The 70-95-100 rule of thumb</title>
+        <p>
+          The 70-95-100 rule is more accurate. In many distributions,
+        </p>
+        <ul>
+          <li><p>Approximately 70% of the values are within 1 standard deviation of the mean.</p></li>
+          <li><p>Approximately 95% of the values are within 2 standard deviations of the mean.</p></li>
+          <li><p>Nearly all of the values are within 3 standard deviations of the mean.</p></li>
+        </ul>
+        <p>
+          The 70-95-100 rule holds approximately for most reasonably symmetric data sets, but for skew data or distributions with long tails, outliers or clusters, it is often less accurate.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-understanding-mean-sd">
+      <title>Understanding Means and Standard Deviation</title>
+      <p>
+        It is possible to roughly guess the mean and standard deviation from a histogram and roughly sketch a symmetric histogram matching any given mean and standard deviation.
+      </p>
+      <p>
+        Understanding the definition of the standard deviation is much less important than knowing its properties and having a feel for what its numerical value tells you about the data.
+      </p>
+      
+      <paragraphs>
+        <title>Guessing s from histogram</title>
+        <p>
+          About 95% of the values should be within <m>2s</m> of the mean, so after dropping the top 2.5% and bottom 2.5% of the values (histogram area), the remainder should span approximately <m>4s</m>. Dividing this range by 4 should approximate the standard deviation.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Sketching a histogram from the mean and s</title>
+        <p>
+          Similarly, you should be able to draw a rough sketch of a symmetric histogram with any mean and standard deviation that you are given. (It would be centred on the mean and 95% of the area would be within <m>2s</m> of this.)
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-warnings-mean-sd">
+      <title>Warnings about Mean and Standard Deviation</title>
+      <p>
+        The mean and standard deviation cannot give any indication of the existance of outliers, skewness or clusters. A dot plot or histogram should be examined before reporting these numerical summaries.
+      </p>
+      
+      <assemblage>
+        <title>Important</title>
+        <p>
+          The mean and standard deviation hold no information about the shape of a distribution, other than its centre and spread.
+        </p>
+        <p>
+          Many different distributions have the same mean and standard deviation.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          Clusters, outliers and skewness are important features of a data set and should influence the analysis that you perform and the conclusions that you reach. In particular, if you ignore outliers or clusters, you could easily reach the wrong conclusions.
+        </p>
+        <p>
+          It is therefore essential that you look at a graphical display of a distribution before summarising with a mean and standard deviation.
+        </p>
+      </assemblage>
+    </section>
+  </chapter>
+
+  <!-- Section 6: More about Variation (optional) -->
+  <chapter xml:id="ch-more-variation">
+    <title>More about Variation (optional)</title>
+
+    <section xml:id="sec-effect-outliers">
+      <title>Effect of Outliers</title>
+      <p>
+        If a data set contains an outlier, the mean and especially the standard deviation can be badly affected. The values may be obviously wrong when the 70-95-100 rule is applied in the context of the data but examining a dot plot or box plot is best.
+      </p>
+      
+      <paragraphs>
+        <title>Outliers and the standard deviation</title>
+        <p>
+          The mean and standard deviation are inadequate descriptions of distributions that have clusters, outliers or skewness.
+        </p>
+        <p>
+          An outlier has a strong influence on the mean of the data and an even bigger effect on the standard deviation. In the data below, one measurement was missing and coded as '999'. If this value (999) is included, the mean is a feasible value, but the standard deviation should be recognised as being unreasonable.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          A graphical display such as a dot plot is the best way to detect an outlier and you should always look at the data before summarising with a mean and standard deviation.
+        </p>
+        <p>
+          An outlier should be carefully examined. Was the value incorrectly recorded? Was there something unusual about the individual from which the measurement was obtained? If we are convinced that there was something wrong about the value, it should be removed from the data set before further analysis.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-sd-grouped-data">
+      <title>Standard Deviation of Grouped Data</title>
+      <p>
+        The standard deviation within groups is usually lower than the overall standard deviation.
+      </p>
+      
+      <paragraphs>
+        <title>Within-group and overall standard deviation</title>
+        <p>
+          In some data sets, the 'individuals' can be split into groups.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          When the three groups above (A, B and C) are combined, all information about the differences between the groups is lost. The overall variability is also considerably larger than variability within the groups.
+        </p>
+        <p>
+          <alert>Note:</alert> The standard deviation of the combined data set is often considerably higher than that of the separate groups.
+        </p>
+        <p>
+          It is therefore better to separately describe the distributions within the groups than to describe the overall distribution with a single mean and standard deviation.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-explained-unexplained">
+      <title>Explained and Unexplained Variation</title>
+      <p>
+        Splitting a data set into groups of 'similar' values results in more accurate predictions of future values if the group membership is known. The grouping is said to explain some of the overall variation.
+      </p>
+      
+      <paragraphs>
+        <title>Types of variation</title>
+        <p>
+          The table below summarises monthly rainfall data in a city over several years:
+        </p>
+        <table>
+          <title>Monthly rainfall statistics</title>
+          <tabular>
+            <row header="yes">
+              <cell>Month</cell>
+              <cell>Mean</cell>
+              <cell>Standard deviation</cell>
+            </row>
+            <row><cell>January</cell><cell>32.13</cell><cell>2.11</cell></row>
+            <row><cell>February</cell><cell>31.44</cell><cell>2.17</cell></row>
+            <row><cell>March</cell><cell>31.24</cell><cell>2.08</cell></row>
+            <row><cell>April</cell><cell>30.46</cell><cell>1.73</cell></row>
+            <row><cell>May</cell><cell>28.53</cell><cell>1.69</cell></row>
+            <row><cell>June</cell><cell>26.10</cell><cell>1.37</cell></row>
+            <row><cell>July</cell><cell>26.43</cell><cell>1.32</cell></row>
+            <row><cell>August</cell><cell>30.04</cell><cell>1.28</cell></row>
+            <row><cell>September</cell><cell>33.44</cell><cell>1.24</cell></row>
+            <row><cell>October</cell><cell>34.93</cell><cell>1.01</cell></row>
+            <row><cell>November</cell><cell>34.34</cell><cell>1.49</cell></row>
+            <row><cell>December</cell><cell>32.62</cell><cell>1.75</cell></row>
+            <row><cell>Overall</cell><cell>30.99</cell><cell>3.17</cell></row>
+          </tabular>
+        </table>
+        <p>
+          We can distinguish between three types of variation in the rainfalls:
+        </p>
+        <p>
+          <em>Overall variation</em>
+        </p>
+        <p>
+          Ignoring the months, the overall standard deviation is 3.17.
+        </p>
+        <p>
+          <em>Unexplained variation</em>
+        </p>
+        <p>
+          Variation within months is unexplained <mdash/> it is unpredictable from available information. The standard deviations within months are between 1.01 and 2.17.
+        </p>
+        <p>
+          <em>Explained variation</em>
+        </p>
+        <p>
+          This is the difference between the overall and unexplained variation. (We do not give a numerical definition here.) Knowing the month would help to predict rainfall, so the month explains part of the variation in rainfalls.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-variance-df">
+      <title>Variance and Degrees of Freedom (advanced)</title>
+      <p>
+        The square of the standard deviation is called the variance; its value is harder to understand but it is the basis of important advanced statistical methods. The degrees of freedom are the number of pieces of information contributing to the standard deviation (or variance).
+      </p>
+      
+      <paragraphs>
+        <title>Variance</title>
+        <p>
+          <me>\text{variance} = (\text{standard deviation})^2 = s^2</me>
+        </p>
+        <p>
+          The units of the variance are the square of the units of the original values. For example, if the values are weights, the standard deviation might be 6 kg, but the variance would be 36 square kg. Since its units are easier to interpret, standard deviations are more easily understood measures of spread, but variances are important in advanced statistics. (An important collection of methods for analysing relationships between variables is called analysis of variance.)
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Degrees of freedom (optional)</title>
+        <p>
+          The divisor <m>(n - 1)</m> in the formula for the sample standard deviation is called its <term>degrees of freedom</term>. This is the number of 'independent pieces of information' that contribute to it.
+        </p>
+        <p>
+          <em>Sample of size n = 1</em>
+        </p>
+        <p>
+          With only a single value, there is no information about the spread of values, so there are 0 degrees of freedom.
+        </p>
+        <p>
+          <em>Sample of size n = 2</em>
+        </p>
+        <p>
+          With two values, <m>x_1</m> and <m>x_2</m>, there is only a single piece of information about the spread <mdash/> the difference between the values, <m>x_1 - x_2</m> <mdash/> and there is one degree of freedom.
+        </p>
+        <p>
+          <em>Sample of size n</em>
+        </p>
+        <p>
+          In general, there is one less 'piece of information about the spread' in the sample than the number of data points because the sample mean, <m>\bar{x}</m>, is one piece of information that does not give any information about the spread of the data. There are therefore <m>(n - 1)</m> degrees of freedom.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-rmse">
+      <title>Root Mean Squared Error (advanced)</title>
+      <p>
+        The root mean squared error summarises how close the values in a data set are to a target, k.
+      </p>
+      
+      <paragraphs>
+        <title>Distance of values from a target, k</title>
+        <p>
+          The distance of a single random value from a target is called its error.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Root mean squared error</title>
+        <p>
+          One solution to the problem of negative errors is to square them before averaging,
+        </p>
+        <p>
+          <me>\text{mean squared error} = \frac{\sum(x - k)^2}{n}</me>
+        </p>
+        <p>
+          To express this in the original units of the data (instead of units such as squared kg), we can take its square root:
+        </p>
+        <p>
+          <me>\text{root mean squared error} = \sqrt{\frac{\sum(x - k)^2}{n}}</me>
+        </p>
+        <p>
+          The root mean squared error is a 'typical' error.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-distances-mean">
+      <title>Distances from the Mean (advanced)</title>
+      <p>
+        The standard deviation is similar to the root mean squared error, but summarises distances to the mean of the data. Its value can be interpreted in terms of the average area of squares on a graph.
+      </p>
+      
+      <paragraphs>
+        <title>Distances from the centre of the distribution</title>
+        <p>
+          The population standard deviation is similar to the root mean square error but summarises the distances of the values from the centre of their distribution. It summarises the spread of values in the data.
+        </p>
+        <p>
+          <me>\text{population standard deviation} = \sqrt{\frac{\sum(x - \mu)^2}{n}}</me>
+        </p>
+        <p>
+          This can be illustrated graphically <mdash/> the squared standard deviation is the average of the squared distances of values to their mean:
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          Standard deviations in reports are likely to be sample standard deviation.
+        </p>
+      </paragraphs>
+    </section>
+  </chapter>
+
+  <!-- Section 7: Proportions and Percentiles -->
+  <chapter xml:id="ch-proportions-percentiles">
+    <title>Proportions and Percentiles</title>
+
+    <section xml:id="sec-illustrative-data">
+      <title>Illustrative Data Set</title>
+      <p>
+        A data set containing annual rainfalls in Samaru, Nigeria, will be used for illustrative purposes.
+      </p>
+      
+      <paragraphs>
+        <title>Annual rainfall in Samaru, Nigeria</title>
+        <p>
+          In most of Africa, the most important climatic variable is rainfall. Rainfall is usually highly seasonal and failure of crops is normally associated with late arrival of rain or low rainfall. A better understanding of the distribution of rainfall can affect the crops that are grown and when they are planted.
+        </p>
+        <p>
+          The annual rainfall (in mm) in Samaru, Northern Nigeria between 1928 and 1983 will be used as an example in this section.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-cumulative-proportions">
+      <title>Cumulative Proportions</title>
+      <p>
+        Half the data are lower than the median. A quarter and three quarters are lower than the lower and upper quartiles. At any other value, x, the proportion of data values that are x or lower is called its cumulative proportion.
+      </p>
+      
+      <paragraphs>
+        <title>Cumulative proportions</title>
+        <p>
+          The proportion of values in the data set that are less than or equal to any value, <m>x</m>, is called its <term>cumulative proportion</term>.
+        </p>
+        <p>
+          For the median and quartiles, the cumulative proportions are:
+        </p>
+        <table>
+          <title>Cumulative proportions for quartiles</title>
+          <tabular>
+            <row header="yes">
+              <cell>Value</cell>
+              <cell>Proportion Below</cell>
+            </row>
+            <row><cell>Lower Quartile</cell><cell>0.25</cell></row>
+            <row><cell>Median</cell><cell>0.5</cell></row>
+            <row><cell>Upper Quartile</cell><cell>0.75</cell></row>
+          </tabular>
+        </table>
+        <p>
+          The proportion of values greater than <m>x</m> is one minus its cumulative proportion,
+        </p>
+        <p>
+          <me>\Pr(\text{values} > x) = 1 - \Pr(\text{values} \leq x)</me>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Equality</title>
+        <p>
+          For continuous data, we do not need to distinguish between the proportion of values less than <m>x</m> and the proportion that are less than or equal to <m>x</m>. Provided the values are recorded accurately enough,
+        </p>
+        <ul>
+          <li><p>these two proportions are usually equal for most <m>x</m> of interest, and</p></li>
+          <li><p>since the same value rarely appears more than once, the difference is unlikely to be more than <m>1/n</m>.</p></li>
+        </ul>
+        <p>
+          However for discrete data (counts) it is important to distinguish the terms 'less than' and 'less than or equal to'.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-graph-cumulative">
+      <title>Graph of Cumulative Proportions</title>
+      <p>
+        A graph of the cumulative proportion below x against x is a step function that increases from zero (at small x) to one (at high x).
+      </p>
+      
+      <paragraphs>
+        <title>Cumulative distribution function</title>
+        <p>
+          The cumulative proportion of values less than or equal to <m>x</m> can be found for any <m>x</m>. They can be shown together in a single graph of the cumulative proportion against <m>x</m>. This is called the <term>cumulative distribution function</term> of the variable.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          The cumulative distribution function for a data set with <m>n</m> values is a step function that rises from 0.0 below the minimum x-value to 1.0 at the maximum <m>x</m> in the data. It increases by <m>1/n</m> at each value in the data set.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-percentiles">
+      <title>Percentiles</title>
+      <p>
+        Given any target proportion, p, it is possible to find a corresponding value, x, for which approximately this proportion of values is x or lower. For example, the percentile for p = 50% is the median.
+      </p>
+      <p>
+        <alert>TODO: IMAGE PLACEHOLDER</alert>
+      </p>
+      
+      <paragraphs>
+        <title>Finding percentiles</title>
+        <p>
+          Given any proportion, <m>p</m>, between 0 and 1, we can find a value <m>x</m> such that approximately this proportion, <m>p</m>, of values is <m>x</m> or lower in our data set. This is called the <m>p</m>'th <term>quantile</term> in the data set. When <m>p</m> is given as a percentage, the same value is called the <m>p</m>'th <term>percentile</term>.
+        </p>
+        <assemblage>
+          <title>Important</title>
+          <p>
+            The <m>p</m>'th percentile is the value <m>x</m> such that <m>p</m> percent of the data set are <m>x</m> or lower.
+          </p>
+        </assemblage>
+        <p>
+          Percentiles can be read from a graph of the cumulative distribution function.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Details (optional)</title>
+        <p>
+          It may not be possible to find a value, <m>x</m>, such that exactly <m>p</m> percent of the data are lower, expecially if the sample size is not a multiple of 100. If <m>n = 56</m>, the cumulative distribution function is a step function that rises by <m>1/56</m> at each data value, so it is impossible to find an x-value for which exactly say 43% of values are lower.
+        </p>
+        <p>
+          There is no universally accepted general definition of percentiles and different statistical programs give slightly different values. The differences are minor and should not affect your interpretation of the data.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-displaying-percentiles">
+      <title>Displaying Percentiles</title>
+      <p>
+        The 0, 25, 50, 75 and 100'th percentiles are displayed as a box plot. Other percentiles can be displayed in a similar shaded rectangle.
+      </p>
+      
+      <paragraphs>
+        <title>25, 50 and 75% percentiles</title>
+        <p>
+          The 50th percentile is the median and the 25th and 75th percentiles are the lower and upper quartiles. A box plot therefore shows these percentiles.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Displaying other percentiles</title>
+        <p>
+          For some data sets, other percentiles are more important than the 25th and 75th ones. A similar 'box' can be used to graphically display any other percentiles. It is best to alter the way the box is drawn to avoid confusion with the standard box plot.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-comparing-groups-percentiles">
+      <title>Comparing Groups</title>
+      <p>
+        Box plots are useful for comparing groups. If the groups are in order (e.g. the months of a year), the median, quartiles and extremes can be joined and shaded as bands. This effectively describes how the distribution of values varies.
+      </p>
+      
+      <paragraphs>
+        <title>Joined-up quartiles</title>
+        <p>
+          Box plots are an effective way to compare the distributions of different groups of values. When the groups are ordered, an alternative to the conventional display of the box plots is to join up the medians, quartiles and extremes of the groups in shaded bands.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-comparing-other-percentiles">
+      <title>Comparing Groups with Other Percentiles</title>
+      <p>
+        In some applications, different percentiles are important. They can also be joined and shaded as bands to compare ordered groups.
+      </p>
+      
+      <paragraphs>
+        <title>Joined-up percentiles</title>
+        <p>
+          A similar display can be used with other percentiles.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-better-definition-percentiles">
+      <title>Better Definition of Percentiles</title>
+      <p>
+        The graph of cumulative probabilities is a step function. Most software reports percentiles that are equivalent to reading values off a smoothed version of this step function.
+      </p>
+      
+      <paragraphs>
+        <title>Different definitions of percentiles</title>
+        <p>
+          It was mentioned earlier that there are several competing definitions of the upper and lower quartile. All such definitions split the data approximately into quarters but there is not a unique way to do this.
+        </p>
+        <p>
+          There is even less agreement about the precise definition of other percentiles, and different computer software finds them in different ways. The definitions are usually based on a smoothed version of the cumulative distribution function.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          The differences between the different definitions are small if the data set is large.
+        </p>
+        <assemblage>
+          <title>Important</title>
+          <p>
+            If your conclusion about the data would change with a different definition of the percentiles, you are over-interpreting the data.
+          </p>
+        </assemblage>
+      </paragraphs>
+    </section>
+  </chapter>
+
+  <!-- Section 8: Transformations -->
+  <chapter xml:id="ch-transformations">
+    <title>Transformations</title>
+
+    <section xml:id="sec-linear-transformations">
+      <title>Linear Transformations</title>
+      <p>
+        Linear transformations of data affect the scale on the axis of graphical displays, but do not otherwise change the shape of the distribution of values.
+      </p>
+      
+      <paragraphs>
+        <title>Linear transformations</title>
+        <p>
+          When the values are replaced by other using an equation of the form
+        </p>
+        <p>
+          <me>\text{new value} = a + b \times \text{old value}</me>
+        </p>
+        <p>
+          we say that there has been a <term>linear transformation</term> of the original values. The original and transformed data can be displayed together with dual axes.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Centre and spread</title>
+        <p>
+          The centre and spread of the data are different, but the shape of the distribution otherwise remains unchanged. The mean and standard deviation are related:
+        </p>
+        <md>
+          <mrow>\text{new mean} \amp= a + b \times \text{old mean}</mrow>
+          <mrow>\text{new sd} \amp= |b| \times \text{old sd}</mrow>
+        </md>
+        <p>
+          Note that if the scale factor, <m>b</m>, is negative, we must change its sign since the standard deviation must always be positive.
+        </p>
+        <p>
+          Most other measures of centre (e.g. the median) and spread (e.g. the interquartile range) are similarly related.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-log-transformations">
+      <title>Log Transformations</title>
+      <p>
+        Nonlinear transformations change the shape of the distribution of values more profoundly. A logarithmic transformation can help detect patterns in very skew data sets.
+      </p>
+      
+      <paragraphs>
+        <title>Nonlinear transformations</title>
+        <p>
+          Nonlinear transformations arise when the values are replaced by a nonlinear function of the original measurements, such as their logarithm or inverse. They have a more fundamental effect on the shape of a distribution than linear transformations.
+        </p>
+        <p>
+          The most commonly used nonlinear transformation is:
+        </p>
+        <p>
+          <me>\text{new value} = \log_{10}(\text{old value})</me>
+        </p>
+        <p>
+          Natural logarithms (base e) have a similar effect on the distribution of values but base-10 logarithms are easier to interpret so we use them here.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Properties of logarithms</title>
+        <ul>
+          <li><p>Multiplying any value by 10 increases its logarithm by 1.</p></li>
+          <li><p>Doubling any value increases its logarithm by <m>\log_{10}(2) = 0.3010</m>.</p></li>
+        </ul>
+        <p>
+          Consider four values 1, 10, 100 and 1000. The first two values are much closer to each other than the last two values. However their logarithms are 0, 1, 2 and 3, so their logarithms are evenly spaced out.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Effect on the shape of a distribution</title>
+        <p>
+          A logarithmic transformation selectively spreads out low values in a distribution and compresses high values. It is therefore useful before analysing skew data with a long tail towards the high values. It will spread out a dense cluster of low values and may detect clustering or outliers that would not be visible in graphical displays of the original data.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-when-use-log">
+      <title>When to Use a Log Transformation?</title>
+      <p>
+        Logarithmic transformations are most useful for 'quantity' data that cover several orders of magnitude.
+      </p>
+      
+      <paragraphs>
+        <title>'Quantities'</title>
+        <p>
+          Logarithmic transformation can only be used for data sets consisting of positive values <mdash/> logarithms are undefined for negative or zero values. They are therefore particularly useful for quantities <mdash/> i.e. amounts of something. Indeed, many researchers routinely apply logarithmic transformation to quantity data before analysis.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>When are they effective?</title>
+        <p>
+          A log transformation affects the shape of the distribution most when the ratio of the largest to the smallest value in the data is large. When this ratio is less than 10 (one order of magnitude) then the transformation has much less influence on the shape of the distribution, as in the data set below.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-power-transformations">
+      <title>Power Transformations (advanced)</title>
+      <p>
+        Power transformations are a more flexible family of nonlinear transformations that are useful in data exploration.
+      </p>
+      
+      <paragraphs>
+        <title>Power transformations</title>
+        <p>
+          A more general family of transformations that is flexible enough to reduce or eliminate the skewness in a wide range of data sets is:
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          This family of power transformations includes many common ones:
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-power-skewness">
+      <title>Power Transforms and Skewness</title>
+      <p>
+        The effect of power transformations on the skewness of data is evident in a wide range of graphical displays.
+      </p>
+      
+      <paragraphs>
+        <title>Effect of power transformations</title>
+        <p>
+          Power transformations affect the skewness of data.
+        </p>
+        <p>
+          If a power transformation with <m>p > 1</m> is applied to data with a symmetric distribution, it will make the data skew with a long right tail. If the power transformation has <m>p \lt 1</m>, the distribution will become one with a long left tail.
+        </p>
+        <p>
+          In practice, power transformations are used to do the opposite. They can change many skewness distributions into fairly symmetric ones.
+        </p>
+      </paragraphs>
+    </section>
+  </chapter>
+
+  <!-- Section 9: Discrete Data (counts) -->
+  <chapter xml:id="ch-discrete-data">
+    <title>Discrete Data (counts)</title>
+
+    <section xml:id="sec-discrete-continuous">
+      <title>Discrete and Continuous Data</title>
+      <p>
+        Discrete data sets contain counts whereas continuous data sets could potentially contain any values within an interval. Stacked dot plots are good displays of small discrete data sets containing small counts.
+      </p>
+      <p>
+        It is important to distinguish two types of numerical data.
+      </p>
+      <p>
+        <em>Discrete data</em>
+      </p>
+      <p>
+        When the values in the batch are whole numbers (counts), the data set is called <term>discrete</term>.
+      </p>
+      <p>
+        <em>Continuous data</em>
+      </p>
+      <p>
+        When the data are not constrained to be whole numbers, the data set is called <term>continuous</term>.
+      </p>
+      
+      <paragraphs>
+        <title>Dot plots for counts</title>
+        <p>
+          Dot plots can be used to display count data. However since discrete values are often repeated several times in a data set, the crosses need to be jittered or, preferably, stacked.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          If there is a stack for each integer value, the stacked dot plot is a complete representation of the data.
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-histograms-counts">
+      <title>Histograms for Counts</title>
+      <p>
+        When the range of possible counts is moderate or large, a histogram is an effective display of the distribution. Class width should be a whole number and class boundaries should end in '.5'.
+      </p>
+      
+      <paragraphs>
+        <title>Displaying moderate or large counts</title>
+        <p>
+          For discrete data sets whose values are large counts, a histogram can be used to give a 'smooth' summary of the shape of the distribution of values.
+        </p>
+        <p>
+          If the counts are a bit smaller, the exact definition of the histogram classes becomes important. The class boundaries should end in '.5' to ensure that data values do not occur on the boundary of two classes.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-bar-charts">
+      <title>Bar Charts</title>
+      <p>
+        When the range of possible counts is small, a bar chart is a better representation of the data than a histogram.
+      </p>
+      
+      <paragraphs>
+        <title>Displaying small counts</title>
+        <p>
+          When the range of values in a discrete data set is small, a histogram can be drawn with class width 1 (and with class boundaries ending in '.5'). These classes are centred on 1, 2, 3, etc.
+        </p>
+        <p>
+          This can be improved by narrowing the histogram rectangles into bars to emphasise the discrete nature of the data. This is called a <term>bar chart</term>.
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+
+    <section xml:id="sec-mean-sd-discrete">
+      <title>Mean and Standard Deviation (advanced)</title>
+      <p>
+        A frequency table is often used to summarise discrete data. The mean and standard deviation can be evaluated easily from the frequency table.
+      </p>
+      
+      <paragraphs>
+        <title>Calculating the mean from a frequency table</title>
+        <table>
+          <title>Frequency table</title>
+          <tabular>
+            <row header="yes">
+              <cell><m>x</m></cell>
+              <cell><m>f_x</m></cell>
+            </row>
+            <row><cell>1</cell><cell>140</cell></row>
+            <row><cell>2</cell><cell>180</cell></row>
+            <row><cell>3</cell><cell>60</cell></row>
+            <row><cell>4</cell><cell>100</cell></row>
+            <row><cell>5</cell><cell>60</cell></row>
+            <row><cell>6</cell><cell>40</cell></row>
+            <row><cell>7</cell><cell>20</cell></row>
+            <row><cell>total</cell><cell>600</cell></row>
+          </tabular>
+        </table>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+        <p>
+          More generally,
+        </p>
+        <p>
+          <me>\bar{x} = \frac{\sum x \times f_x}{n}</me>
+        </p>
+        <p>
+          where the summation is over the distinct values in the data set, rather than all individuals.
+        </p>
+      </paragraphs>
+      
+      <paragraphs>
+        <title>Calculating the standard deviation</title>
+        <p>
+          A similar formula holds for the standard deviation, using the formula
+        </p>
+        <p>
+          <alert>TODO: IMAGE PLACEHOLDER</alert>
+        </p>
+      </paragraphs>
+    </section>
+  </chapter>
+
+</part>
+
+
